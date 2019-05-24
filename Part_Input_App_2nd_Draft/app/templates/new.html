@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+<!-- {% from "_formhelpers.html" import render_field %} -->
+
+{% block content %}
+<h1>Enter New Part </h1>
+<form action = "" method="post" action="/">
+  {{ form.csrf_token }}
+<p>
+  {{ form.partno.label }}<br>
+  {{ form.partno(size=32) }}<br>
+  {% for error in form.partno.errors %}
+  <span style="color: red;">[{{ error }}]</span>
+{% endfor %}
+</p>
+<p>
+  {{ form.lot.label }}<br>
+  {{ form.lot(size=32) }}
+  {% for error in form.lot.errors %}
+  <span style="color: red;">[{{ error }}]</span>
+{% endfor %}
+</p>
+<p>
+  {{ form.hanger.label }}<br>
+  {{ form.hanger(size=32) }}
+  {% for error in form.hanger.errors %}
+  <span style="color: red;">[{{ error }}]</span>
+{% endfor %}
+</p>
+<p>{{ form.submit() }} </p>
+</form>
+{% endblock %}

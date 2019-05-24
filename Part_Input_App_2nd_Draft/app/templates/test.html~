@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+
+<h1>Yes, this does happen to be a test.</h1>
+
+{% endblock %}

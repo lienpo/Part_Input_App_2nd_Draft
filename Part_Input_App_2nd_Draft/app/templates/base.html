@@ -1,0 +1,16 @@
+{% from "_formhelpers.html" import render_field %}
+
+<html>
+  <head>
+    <link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+    <div>
+      Part_Input
+      <a href="/">New</a>
+      <a href="/list">All Parts</a>
+      <a href="/test">Tests</a>
+    </div>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>
